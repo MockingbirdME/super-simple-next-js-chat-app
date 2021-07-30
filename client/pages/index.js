@@ -17,11 +17,12 @@ export default function Home() {
       // Enable pusher logging - don't include this in production
       Pusher.logToConsole = true;
 
-      const pusher = new Pusher('cfc42716c0b45b395239', {
+      const pusher = new Pusher('940714571a82759ab2fa', {
         cluster: 'us2'
       });
 
       const channel = pusher.subscribe('chat');
+
       channel.bind('message', function(data) {
         const allMessages = [...messages];
         allMessages.push(data);
