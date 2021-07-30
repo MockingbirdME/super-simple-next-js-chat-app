@@ -2,10 +2,12 @@ const express = require('express');
 const cors = require('cors');
 const Pusher = require("pusher");
 
+const secret = require('../secret');
+
 const pusher = new Pusher({
-  appId: "1239723",
-  key: "cfc42716c0b45b395239",
-  secret: "7c300a2039e8c0bbd93b",
+  app_id: "1239723",
+  key: "940714571a82759ab2fa",
+  secret,
   cluster: "us2",
   useTLS: true
 });
